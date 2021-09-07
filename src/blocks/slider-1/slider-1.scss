@@ -1,0 +1,11 @@
+.slider-1 {
+	$self: &;
+	&__bg {
+		z-index: 1;
+		background-position: top right;
+		background-size: 1040px;
+		background-repeat: no-repeat;
+		height: 582px;
+		position: relative;
+	}
+}
