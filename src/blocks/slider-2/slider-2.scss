@@ -1,11 +1,19 @@
 .slider-2 {
 	$self: &;
-	position: absolute;
+	position: relative;
 	z-index: 3;
 	color:#fff;
 	padding-top: 83px;
-	// min-height: 582px;
 	padding-left: 107px;
+
+	&__info {
+		background-color: transparent;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		text-align: left;
+		overflow: hidden;
+	}
 
 	&__title {
 		font-size: 52px;
@@ -14,10 +22,13 @@
 		line-height: 78px;
 		margin-bottom: 16px;
 	}
+
 	&__text {
 		line-height: 27.2px;
 		font-weight: 500;
 		max-width: 445px;
 		margin-bottom: 32px;
-	}
+	}	
+	
+
 }

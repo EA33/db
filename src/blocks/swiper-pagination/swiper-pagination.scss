@@ -1,0 +1,47 @@
+.swiper-pagination {
+	max-width: 660px;
+	margin-right: 60px;
+	width: 100%;
+	display: flex;
+	margin-left: auto;
+	margin-top: -217px;
+	margin-bottom: 35px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	z-index: 3;
+	$self: &;
+	&-bullet {
+		background-size: contain;
+		background-position: center;
+		background-repeat: no-repeat;
+		background: url(images/image-1.jpg) center/ cover no-repeat;
+		display: block;
+		opacity: 1;
+		height: 180px;
+		border-radius: 0;
+		width: calc(100% / 2 - 20px);
+		margin: 0 10px;
+		box-shadow: (0px 8px 30px rgba(2, 43, 87, 0.25));
+		&::before {
+			content: '';
+			display: block;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(74.95deg, rgba(0, 0, 0, 0.5) 9.46%, rgba(0, 0, 0, 0) 97.16%);
+
+		}
+	}
+	&-bullet:nth-child(2) {
+		background: url(images/image-3.jpg) center/ cover no-repeat;
+	}
+	&-bullet:nth-child(3) {
+		background: url(images/image-4.jpg) center/ cover no-repeat;
+	}
+	.swiper-pagination-bullet-active {
+		&::before {
+			display: none;
+		}
+		
+	}
+}
