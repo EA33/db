@@ -1,0 +1,56 @@
+.partners {
+	$self: &;
+	margin-bottom: 100px;
+	@include media ('<=md'){
+		margin-bottom: 45px;
+	}
+
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@include media ('<=md'){
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+	}
+	
+	&__links {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		max-width: 1035px;
+		width: 100%;
+		margin: 0 -10px;
+		@include media ('<=md'){
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		
+	}
+	
+	&__link {
+		margin: 10px;
+		@include media ('<=md'){
+			margin: 16px 10px;
+		}
+	}
+	
+	&__logo {
+		width: 213px;
+		height: 28px;
+	}
+	&__logo-2 {
+		width: 89px;
+		height: 30px;
+	}
+	&__logo-3 {
+		width: 127px;
+		height: 28px;
+	}
+	&__logo-4 {
+		width: 123px;
+		height: 24px;
+	}
+}
+

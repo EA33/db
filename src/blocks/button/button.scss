@@ -1,0 +1,29 @@
+.button {
+	$self: &;
+	display: inline-block;
+	padding: 22px 40px 23px 40px;
+	box-sizing: border-box;	
+	margin-top: 32px;
+	color: #fff;
+	background: linear-gradient(104.58deg, #056088 10.57%, #09A7CA 96.62%);
+	
+	&_form {
+		margin-top: 0;
+		padding: 18px 40px 18px;
+		border: 0;
+		font-family: 'Poppins', sans-serif;
+		font-size: 16px;
+		line-height: 27.2px;
+		font-weight: 500;
+		@include media ('<=xs') {
+			margin-bottom: 32px;
+		}
+	}
+
+	&_footer {
+		@include media ('<=md') {
+			margin: 40px 0 32px;
+		}
+		
+	}
+}

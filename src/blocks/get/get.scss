@@ -1,0 +1,76 @@
+.get {
+	$self: &;
+	margin-bottom: 100px;
+	@include media ('<md') {
+		margin-bottom: 50px;
+	}
+	
+	&__inner {
+		padding: 55px 0;
+		box-sizing: border-box;
+		background: url(images/bg-get.jpg) center / cover no-repeat transparent;
+		@include media ('<xs') {
+			padding: 35px 10px 3px;
+		}
+	}
+	
+	&__form {
+		display: flex;
+		max-width: 670px;
+		width: 100%;
+		margin: 0 auto;
+		box-sizing: border-box;
+		@include media ('<xs') {
+			flex-wrap: wrap;
+		}
+
+	}
+
+	&__title {
+		max-width: 760px;
+		width: 100%;
+		margin: 0 auto 16px;
+		font-weight: 700;
+		font-size: 52px;
+		line-height: 78px;
+		text-align: center;
+		color: #fff;
+		@include media ('<md') {
+			font-size: 42px;
+			line-height: 58px;
+		}
+		@include media ('<xs') {
+			font-size: 32px;
+			line-height: 48px;
+		}
+	}
+
+	&__info {
+		max-width: 517px;
+		margin: 0 auto 32px;
+		font-weight: 500;
+		text-align: center;
+		color: #fff;
+	}
+
+	&__input {
+		flex-grow: 1;
+		padding: 18px 30px 17px;
+		border: none;
+		outline:rgba(0, 0, 0, 0.4);
+		box-sizing: border-box;
+		color: rgba(0, 0, 0, 0.4);
+		font-weight: 500;
+		@include media ('<=xs') {
+			margin-bottom: 32px;
+		}
+
+		&::placeholder {
+			box-sizing: border-box;
+			color: rgba(0, 0, 0, 0.4);
+			font-weight: 500;
+
+		}
+	}
+
+}

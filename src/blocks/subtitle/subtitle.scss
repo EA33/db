@@ -1,0 +1,34 @@
+.subtitle {
+	$self: &;
+	max-width: 348px;
+	margin: 16px auto 0;
+	line-height: 28.8px;
+	text-align: center;
+	color: $dark;
+	&_left {
+		margin: 16px 0 0;
+		text-align: left;
+		font-weight: 500;
+	}
+	&_white {
+		color: #fff;
+	}
+
+	&_background {
+		text-align: left;
+		max-width: 416px;
+		width: 100%;
+		margin-top: -109px;
+		margin-right: 0;
+		padding: 32px 67px 39px 53px;
+		box-sizing: border-box;
+		background: linear-gradient(1.17deg, #023957 -19.65%, #056088 93.67%);
+		position: relative;
+		z-index: 6;
+		@include media ('<=xs') {
+			margin-top: 0;
+			max-width: none;
+		}
+		
+	}
+}

@@ -1,0 +1,9 @@
+.logo {
+	$self: &;
+	margin-right: 20px;
+	&_footer {
+		@include media ('<=md') {
+			margin-top: 20px;
+		}
+	}
+}

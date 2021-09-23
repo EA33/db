@@ -40,11 +40,14 @@ $breakpoints: (
 
 
 	
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 // @include font-face("Roboto-Black", "RBBL");
 // @import "../../node_modules/owl.carousel/dist/assets/owl.carousel";
 @import "../../node_modules/swiper/swiper";
 @import "../../node_modules/swiper/components/pagination/pagination";
+@import "../../node_modules/owl.carousel/src/scss/owl.carousel";
+
+
 
 
 // Import BEM blocks scss
@@ -53,9 +56,11 @@ $breakpoints: (
 body, html {
 	box-sizing: border-box;
 	font-size: #{$basesize}px;
-	line-height: calc(#{$basesize}px * 1.4);
+	line-height: calc(#{$basesize}px * 1.7);
+	font-weight: 400;
 	font-family: 'Poppins', sans-serif;
 	background-color: #fff;
+	color: $dark;
 	min-height: 100vh;
 	display: flex;
 	flex-flow: column nowrap;

@@ -1,4 +1,92 @@
 .footer {
 	$self: &;
+	
+	&__top {
+		min-height: 380px;
+		background-color: $mazarine;
+	}
+
+	&__top-inner {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		padding: 60px 70px 74px 74px;
+		box-sizing: border-box;
+		color: #fff;
+		@include media ('<=md') {
+			flex-wrap: wrap;
+		}
+		@include media ('<=xs') {
+			justify-content: flex-start;
+			padding: 60px 0 74px;
+		}
+	}
+
+	&__direction {
+		flex-grow: 1;
+		max-width: 310px;
+		width: 100%;
+		margin-right: 20px;
+		@include media ('<=md') {
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;	
+			flex-direction: row;
+			flex-wrap: wrap;
+			max-width: none;
+			min-height: 120px;
+			margin-right: 0;
+		}
+	}
+
+	&__address {
+		align-content: center;
+		max-width: 200px;
+		line-height: 24px;
+		margin: 16px 20px 0 0;
+	}
+
+	&__columns {
+		display: flex;
+		max-width: 880px;
+		width: 100%;
+		@include media ('<=xs') {
+			flex-wrap: wrap;
+			max-width: none;
+		}
+		@include media ('<=xs') {
+			justify-content: flex-start;
+		}
+	}
+
+	&__column {
+		max-width: 200px;
+		width: 100%;
+		margin-right: 20px;
+		@include media ('<=sm') {
+			max-width: 150px;
+		}
+	}
+
+	&__list {
+		margin-top: 32px;
+	}
+
+	&__item {
+		margin-bottom: 16px;
+	}
+
+	&__link {
+		display: block;
+		line-height: 24px;
+	}
+
+	&__bottom {
+		text-align: center;
+		min-height: 89px;
+		padding: 32px 0 30px;
+		box-sizing: border-box;
+		color: #434343;
+	}
 
 }

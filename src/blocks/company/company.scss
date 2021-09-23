@@ -1,0 +1,132 @@
+.company {
+	$self: &;
+	margin-bottom: 100px;
+	@include media ('<=md') {
+		margin-bottom: 50px;
+	}
+	&__inner {
+		display: flex;
+		justify-content: space-around;
+		@include media ('<=md') {
+			flex-wrap: wrap-reverse;
+		}
+	}
+	&__images {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(200px, auto));
+		grid-gap: 20px;
+		max-width: 640px;
+		width: 100%; 
+		padding-right: 20px;
+		position: relative;
+		@include media ('<=md') {
+			max-width: none;
+			padding-right: 0;
+		}
+		@include media ('<=xxs') {
+			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) ;
+		}
+	}
+		
+	&__image {
+		display: block;
+		height: 100%;
+		width: 100%;
+		max-height: 158px;
+		object-fit: cover;
+	}
+	&__image:nth-child(1) {
+		grid-row: 1/3;
+		max-height: 241px;
+		@include media ('<=xxs') {
+			grid-row: auto;
+		}
+	}
+
+	&__image:nth-child(4) {
+		grid-row: 2/4;
+		max-height: 241px;
+		@include media ('<=xxs') {
+			// grid-row: 3/4;
+			grid-row: auto;
+		}
+	}
+
+	&__circle {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		align-self: center;
+		flex-direction: column;
+		width: 168px;
+		height: 168px;
+		background-color: #fff;
+		box-shadow: 0px 8px 30px rgba(5, 96, 136, 0.15);
+		border-radius: 50%;
+		position: absolute;
+		margin: auto;
+		z-index: 3;
+		&::before {
+			display: block;
+			content: '';
+			background: url(images/icons-sprite.svg#icon-check-view-blue) top/ 78px 59px no-repeat transparent;
+			
+			width: 78px;
+			height: 77px;
+		}
+		@include media ('<=lg') {
+			width: 148px;
+			height: 148px;
+			&::before {
+				height: 68px;
+			}
+		}
+	}
+
+	&__circle-img {
+		width: 50%;
+		height: 55%;
+		fill: #056088;
+	}
+
+	&__circly-text {
+		color: #056088;
+		font-weight: 500;
+	}
+
+
+	&__info {
+		max-width: 640px;
+		margin-bottom: 40px;
+		flex-shrink: 0;
+		@include media ('<=md') {
+			max-width: none;
+			flex-shrink: 1;
+
+		}
+	}
+	
+	&__text {
+		max-width: 425px;
+		margin-top: 16px;
+		@include media ('<=md') {
+			max-width: none;
+		}
+	}
+
+	&__links {
+		display: flex;
+		justify-content: space-between;
+		max-width: 495px;
+		margin-top: 16px;
+	}
+
+	&__link {
+		padding-right: 20px;
+		font-size: 20px;
+		line-height: 34px;
+		font-weight: 700;
+		color: $title;
+	}
+
+}

@@ -1,0 +1,108 @@
+.reviews {
+	$self: &;
+	margin-top: - 401px;
+	margin-bottom: 180px;
+	@include media ('<=md') {
+		margin-top: - 731px;
+		margin-bottom: 130px;
+	}
+	&__inner {
+		display: flex;
+		@include media ('<=md') {
+			flex-wrap: wrap;
+		}
+	}
+	
+	&__info {
+		flex-shrink: 0;
+		display: block;
+		max-width: 330px;
+		min-height: 330px;
+		width: 100%;
+		height: 100%;
+		padding: 51px 32px 50px 33px;
+		box-sizing: border-box;
+		margin-right: -24px;
+		background-color: #fff;
+		@include media ('<=md') {
+			max-width: none;
+			text-align: center;
+		}
+	}
+	
+	&__title {
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 40.8px;
+		color: #056088;
+		text-align: left;
+		@include media ('<=md') {
+			text-align: center;
+		}
+	}
+	
+	&__subtitle {
+		max-width: 195px;
+		margin-top: 16px;
+		line-height: 28.8px;
+		text-align: left;
+		color: $dark;
+		@include media ('<=md') {
+			max-width: 348px;
+			margin: 16px auto 0;
+			text-align: center;
+		}
+	}
+
+	&__box {
+		max-width: 994px;
+		min-height: 401px;
+		width: 100%;
+		height: 100%;
+		background: url(images/bg-reviews.jpg) center / cover no-repeat #fff;
+		position: relative;
+			&::before {
+				display: block;
+				content: '';
+				width: 24px;
+				height: 401px;
+				background-color: #fff;
+			}
+		}
+		
+		&__content {
+			max-width: 416px;
+			margin-left: 30px;
+			position: absolute;
+			right: 0;
+			bottom: -80px;
+			padding: 59px 24px 29px 50px;
+			box-sizing: border-box;
+			background: linear-gradient(1.17deg, #023957 -19.65%, #056088 93.67%);
+			color:#fff;
+			@include media ('<=xxs') {
+				padding: 50px 24px 29px 50px;
+			}
+			&::before {
+				display: block;
+				content: '';
+				width: 102px;
+				height: 102px;
+				margin-top: -95px;
+				margin-left: -80px;
+				border-radius: 50%;
+				background: url(images/staff/image-18.jpg) center / cover no-repeat transparent;
+		}
+	}
+
+	&__text {
+		margin-bottom: 16px;
+		font-style: italic;
+	}
+
+	&__author {
+		font-weight: 600;
+		font-style: italic;
+	}
+
+}

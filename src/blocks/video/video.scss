@@ -1,0 +1,45 @@
+.video {
+	$self: &;
+	margin-bottom: 77px;
+	@include media ('<=md') {
+		margin-bottom: 50px;
+	}
+	&__container {
+		max-width: 1080px;
+		width: 100%;
+	}
+	&__inner {
+		height: 512px;
+		background: url(images/bg-video.jpg) center/cover no-repeat;
+		overflow: hidden;
+		position: relative;
+		@include media ('<=md') {
+			height: 412px;
+		}
+	}
+	&__iframe {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 4;
+	}
+	&__play {
+		width: 106px;
+		height: 106px;
+		background: url(images/videoplay.svg) center/cover no-repeat;
+		border: none;
+		outline: 0;
+		cursor: pointer;
+		position: absolute;
+		z-index: 5;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		@include media ('<=md') {
+			width: 73px;
+			height: 73px;
+		}
+	}
+}

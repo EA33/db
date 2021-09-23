@@ -1,5 +1,11 @@
 .slider-1 {
 	$self: &;	
+	@include media ('<=lg'){
+		max-width: 800px;
+	}
+	@include media ('<=xxs'){
+		max-width: 660px;
+	}
 	&::before {
 		content: '';
 		display: block;
@@ -15,6 +21,12 @@
 	&__bg {
 		img {
 			object-fit: cover;
+			@include media ('<=lg'){
+				min-height: 585px;
+			}
+			@include media ('<=sm'){
+				min-height: 690px;
+			}
 		}
 	}
 

@@ -1,0 +1,106 @@
+.services {
+	$self: &;
+	margin-bottom: 100px;
+	@include media ('<=md') {
+		margin-bottom: 50px;
+	}
+	
+	&__items {
+		display: flex;
+		margin: 32px -10px 0;
+		background-color: #fff;
+		@include media ('<=lg') {
+			flex-wrap: wrap;
+		}
+	}
+	
+	&__item {
+		width: calc(25% - 20px);
+		margin: 0 10px;
+		padding: 20px 37px 44px;
+		box-sizing: border-box;
+		@include media ('<=xxlg') {
+			padding: 15px 20px 28px;
+		}
+		@include media ('<=lg') {
+			width: calc(50% - 20px);
+			padding: 20px 37px 44px;
+		}
+		@include media ('<=sm') {
+			padding: 15px 20px 28px;
+		}
+		@include media ('<=xs') {
+			width: 100%;
+		}
+		
+		&:hover {
+			background: url(images/bg-services.jpg) center/cover no-repeat transparent;
+			transition: all .3s ease;
+
+			#{$self}__title, #{$self}__text {
+				color: #fff;
+			}
+		}
+		
+		&::before {
+			display: block;
+			content: '';
+			width: 56px;
+			height: 56px;
+			margin-bottom: 16px;
+		}
+
+		&_design {
+			&::before {
+				background: url(images/icons-sprite.svg#icon-drafting-view-dark) center / 43px 43px no-repeat transparent;
+			}
+			&:hover {
+				&::before {
+					background-image: url(images/icons-sprite.svg#icon-drafting-view-white);
+				}
+			}
+		}	
+		
+		&_intdesign {
+			&::before {
+				background: url(images/icons-sprite.svg#icon-sofa-view-dark) center / 51px 37px no-repeat transparent;
+			}
+			&:hover {
+				&::before {
+					background-image: url(images/icons-sprite.svg#icon-sofa-view-white);
+				}
+			}
+		}
+		
+		&_build {
+			&::before {
+				background: url(images/icons-sprite.svg#icon-building-view-dark) center / 44px 46px no-repeat transparent;
+			}
+			&:hover {
+				&::before {
+					background-image: url(images/icons-sprite.svg#icon-building-view-white);
+				}
+			}
+		}
+		
+		&_renovation {
+			&::before {
+				background: url(images/icons-sprite.svg#icon-tools-view-dark) center / 46px 43px no-repeat transparent;
+			}
+			&:hover {
+				&::before {
+					background-image: url(images/icons-sprite.svg#icon-tools-view-white);
+				}
+			}
+		}
+	}
+	
+	&__title {
+		margin-bottom: 16px;
+		font-size: 20px;
+		line-height: 34px;
+		font-weight: 700;
+		color: $dark;
+	}
+
+}
