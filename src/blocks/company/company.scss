@@ -75,11 +75,22 @@
 			height: 77px;
 		}
 		@include media ('<=lg') {
-			width: 148px;
-			height: 148px;
+			width: 138px;
+			height: 138px;
 			&::before {
-				height: 68px;
+				background: url(images/icons-sprite.svg#icon-check-view-blue) top/ 68px 53px no-repeat transparent;
+				height: 60px;
 			}
+		}
+		@include media ('<=xs') {
+			width: 110px;
+			height: 110px;
+			&::before {
+				background: url(images/icons-sprite.svg#icon-check-view-blue) top/ 50px 38px no-repeat transparent;
+				width: 58px;
+				height: 40px;
+			}
+			
 		}
 	}
 
@@ -92,6 +103,9 @@
 	&__circly-text {
 		color: #056088;
 		font-weight: 500;
+		@include media ('<=xs') {
+			font-size: 13px;
+		}
 	}
 
 

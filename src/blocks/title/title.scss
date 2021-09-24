@@ -20,9 +20,9 @@
 		max-width: 250px;
 		margin-right: 20px;
 		width: 100%;
-		@include media ('<=sm'){
-			margin-right: 0;
+		@include media ('<=md'){
 			text-align: center;
+			margin-right: 0;
 		}
 
 	}

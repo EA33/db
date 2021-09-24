@@ -1,7 +1,7 @@
 .get {
 	$self: &;
 	margin-bottom: 100px;
-	@include media ('<md') {
+	@include media ('<=md') {
 		margin-bottom: 50px;
 	}
 	
@@ -9,7 +9,11 @@
 		padding: 55px 0;
 		box-sizing: border-box;
 		background: url(images/bg-get.jpg) center / cover no-repeat transparent;
-		@include media ('<xs') {
+		@include media ('<=sm') {
+			padding: 35px 10px 35px;
+		}
+
+		@include media ('<=xs') {
 			padding: 35px 10px 3px;
 		}
 	}
@@ -20,7 +24,7 @@
 		width: 100%;
 		margin: 0 auto;
 		box-sizing: border-box;
-		@include media ('<xs') {
+		@include media ('<=xs') {
 			flex-wrap: wrap;
 		}
 
@@ -35,11 +39,11 @@
 		line-height: 78px;
 		text-align: center;
 		color: #fff;
-		@include media ('<md') {
+		@include media ('<=md') {
 			font-size: 42px;
 			line-height: 58px;
 		}
-		@include media ('<xs') {
+		@include media ('<=xs') {
 			font-size: 32px;
 			line-height: 48px;
 		}
