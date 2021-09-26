@@ -2,10 +2,10 @@ import Swiper, { Navigation, Controller, Pagination, Parallax } from 'swiper';
 Swiper.use([Navigation, Pagination, Controller, Parallax]);
 import { disablePageScroll, enablePageScroll } from 'scroll-lock';
 (() => {
-    let $menu = $('.header__menu');
-    let $toggle = $('.header__toggle');
+    let $menu = $('.header-top__menu');
+    let $toggle = $('.header-top__toggle');
 
-    $('.header__toggle').on('click', function (e) {
+    $('.header-top__toggle').on('click', function (e) {
         e.preventDefault();
         e.stopPropagation();
         $(this).toggleClass('opened');
@@ -19,7 +19,7 @@ import { disablePageScroll, enablePageScroll } from 'scroll-lock';
     });
 
     $(window).on('click', function (e) {
-        if ($menu.hasClass('opened') && !e.target.closest('.header__menu')) {
+        if ($menu.hasClass('opened') && !e.target.closest('.header-top__menu')) {
             e.preventDefault();
             $toggle.removeClass('opened');
             $menu.removeClass('opened');

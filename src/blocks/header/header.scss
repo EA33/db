@@ -4,125 +4,24 @@
 	@include media ('<=md'){
 		margin-bottom: 50px;
 	}
-
+	
 	&__container {
 		max-width: 1470px;
 		min-height: 690px;
+		width: 100%;
 		margin: 0 auto;
 		padding: 0 15px;
+		box-sizing: border-box;
 		overflow: hidden;
 		position: relative;
-	}
-
-	&__top {
-		display: flex;
-		align-items: center;
-		padding: 30px 70px 0 82px;
-		min-height: 108px;
-		box-sizing: border-box;
-		position: relative;
-		z-index: 5;
-		@include media ('<=lg'){
-			padding-right: 30px;
-			padding-left: 30px;
-		}
-		@include media ('<=xs'){
-			padding: 30px 0 0;
-		}
-	}
-
-	&__menu {
-		margin-left: auto;
-		@include media ('<=md'){
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: center;
-			position: fixed;
-			height: 100vh;
-			z-index: 1;
-			right: -310px;
-			top: 0;
-			box-sizing: border-box;
-			max-width: 300px;
-			width: 100%;
-			padding: 150px 20px 30px;
-			background-color: #fff;
-			box-shadow: 0 5px 20px rgba(0,0,0,.12);
-			transition: right .3s ease-in;
-			overflow: auto;
-			&.opened {
-				right: 0;
+		&_onmain {
+			background: url(images/bg-header.jpg) top center / cover no-repeat transparent;
+			min-height: 450px;
+			margin-bottom: 100px;
+			@include media ('<=md'){
+				margin-bottom: 50px;
 			}
 		}
-	}
-
-	&__list {
-		display: flex;
-		@include media ('<=md'){
-			flex-flow: column nowrap;
-			align-items: flex-start;
-		}
-	}
-
-	&__item {
-		margin-left: 40px;
-		@include media ('<=lg'){
-			margin-left: 20px;
-		}
-		@include media ('<=md'){
-			margin-left: 0;
-		}
-	}
-	
-	&__link {
-		display: block;
-		color: $mazarine;
-		@include media ('<=md'){
-			font-size: 18px;
-			margin-bottom: 30px;
-		}
-	}
-
-	&__toggle {
-		display: none;
-		height: 40px;
-		width: 40px;
-		margin-left: auto;
-		background: url(images/menu-open.svg)center /35px 35px no-repeat;
-		position: relative;
-		z-index: 3;
-		@include media ('<=md'){
-			display: block;
-		}
-		// span {
-		// 	display: block;
-		// 	width: 35px;
-		// 	height: 4px;
-		// 	background-color:#023957; 
-		// 	position: absolute;
-		// }
-		// 	&::before {
-		// 		content: '';
-		// 		display: block;
-		// 		width: 35px;
-		// 		height: 4px;
-		// 		background-color:#023957; 
-		// 		position: absolute;
-		// 		top: 50%;
-		// 		transform: translateY(-50%);
-		// 	}
-		// 	&::after {
-		// 		content: '';
-		// 		display: block;
-		// 		width: 35px;
-		// 		height: 4px;
-		// 		background-color:#023957; 
-		// 		position: absolute;
-		// 		bottom: 0;
-		// 	}
-			&.opened {
-				background: url(images/menu-close.svg)center/35px 35px no-repeat;
-			}
 	}
 
 	&__content-over {

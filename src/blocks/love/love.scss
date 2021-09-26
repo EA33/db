@@ -1,0 +1,52 @@
+.love {
+	$self: &;
+	margin-bottom: 80px;
+	background: url(images/bg-love.jpg) top center / cover no-repeat transparent;
+	@include media ('<=md') {
+		margin-bottom: 50px;
+	}
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		padding: 20px 0 20px 20px;
+		@include media ('<=md') {
+			flex-wrap: wrap;
+		}
+		@include media ('<=xs') {
+			padding-left: 0;
+		}
+	}
+	
+	&__content {
+		max-width: 510px;
+		margin: 35px 20px 35px 0;
+		color: #fff;
+		@include media ('<=md') {
+			max-width: none;
+		}
+	}
+	
+	&__text {
+		margin-top: 16px;
+	}
+	
+	&__image {
+		@include media ('<=md') {
+			width: 100%;
+		}
+		
+		img {
+			min-width: 455px;
+			object-fit: cover;
+			height: 388px;
+			@include media ('<=md') {
+				width: 100%;
+				height: 300px;
+			}
+			@include media ('<=xs') {
+				min-width: 0;
+			}
+		}
+	}
+
+}
