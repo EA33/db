@@ -19,6 +19,12 @@
 			margin-bottom: 32px;
 		}
 	}
+	&_align {
+		margin: 0 16px;
+		@include media ('<=md') {
+			margin-bottom: 32px;
+		}
+	}
 
 	&_footer {
 		@include media ('<=md') {

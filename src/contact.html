@@ -1,0 +1,40 @@
+@@include("_head.html", {"class":"home"})
+<div class="header__container header__container_onmain">
+    @@include("_header-top.html")
+    @@include("_header-intro.html", {"title":"Need some consultation or want to collaborarion with us? Let’s connect!",
+    "class":"header-intro__title_wide"})
+</div>
+<main class="main">
+    <section class="talk">
+        <div class="container">
+            <div class="talk__top">
+                <div class="talk__image">
+                    <img src="images/staff/image-22.jpg" alt="image">
+                </div>
+                <div class="talk__about">
+                    <h2 class="title title_left">Let’s talk about anything you need</h2>
+                    <form class="talk__form">
+                        <div class="talk__inputs">
+                            <input class="talk__input" type="text" placeholder="Your name/company name">
+                            <input class="talk__input" type="text" placeholder="Phone/E-mail">
+                        </div>
+                        <textarea class="talk__textarea" placeholder="Message"></textarea>
+
+                    </form>
+                    <button class="button button_form" type="submit">Submit</button>
+                </div>
+            </div>
+            <div class="talk__bottom">
+                <h2 class="title">
+                    Or contact us via e-mails or even mobile call or Whatsapp messages
+                </h2>
+                <div class="talk__buttons">
+                    <button class="button button_form button_align">E-mails</button>
+                    <button class="button button_form button_align">Whatsapp</button>
+                    <button class="button button_form button_align">Message</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+@@include("_bottom.html")
