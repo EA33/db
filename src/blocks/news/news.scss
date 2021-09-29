@@ -1,0 +1,115 @@
+.news {
+	$self: &;
+	// min-height: 580px;
+	background: url(images/bg-news_1.jpg) top / cover no-repeat transparent;
+	padding-bottom: 100px;
+	margin-bottom: 603px;
+	margin-top: 138px;
+	padding-top: 130px;
+	@include media ('<=md') {
+		margin-bottom: 553px;
+	}
+	
+	&__top {
+		display: flex;
+		align-items: flex-end;
+		background: url(images/bg-news.jpg) top / cover no-repeat transparent;
+		min-height: 436px;
+		max-width: 1300px;
+		width: 100%;
+		margin-top: -260px;
+		margin-bottom: 92px;
+	}
+	&__top-inner {
+		display: flex;
+		width: 100%;
+		justify-content: space-around;
+		align-items: center;
+		padding: 37px 15px;
+		@include media ('<=md') {
+			flex-direction: column;
+		}
+	}
+	
+	&__title {
+		max-width: 615px;
+		min-width: 457px;
+		width: 100%;
+		margin-right: 20px;
+		font-size: 52px;
+		font-weight: 700;
+		line-height: 78px;
+		color: #fff;
+		@include media ('<=md') {
+			min-width: 0;
+			text-align: center;
+		}
+	}
+	
+	&__descr {
+		max-width: 342px;
+		color: #fff;
+		@include media ('<=md') {
+			max-width: none;
+			margin-top: 20px;
+			text-align: center;
+		}
+	}
+	
+	&__bottom {
+		margin-bottom: -603px;
+	}
+	
+	&__bottom-inner {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		margin: 0 -10px;
+	}
+	
+	&__item {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		width: calc(33.33333% - 20px);
+		min-height: 490px;
+		margin: 0  10px 100px;
+		box-sizing: border-box;
+		box-shadow: (0px 8px 30px rgba(2, 57, 87, 0.15));
+		background-color: #fff;
+		@include media ('<=md') {
+			width: calc(50% - 20px);
+			margin-bottom: 50px;
+		}
+		@include media ('<=xs') {
+			width: calc(100% - 20px);
+		}
+	}
+
+	&__img {
+		height: 250px;
+		width: 100%;
+		object-fit: cover;
+	}
+
+	&__info {
+		box-sizing: border-box;
+		padding: 30px 30px 0;
+	}
+
+	&__text {
+		margin-top: 16px;
+		margin-bottom: 32px;
+	}
+
+	&__btn {
+		display: block;
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 40.8px;
+		text-align: center;
+		color: #056088;
+	}
+
+}
+
