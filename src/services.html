@@ -1,0 +1,44 @@
+@@include("_head.html", {"class":"home"})
+<div class="header__container header__container_onmain">
+    @@include("_header-top.html")
+    @@include("_header-intro.html", {"title":"Our team services",
+    "class":"header-intro__title_wide"})
+</div>
+<main class="main">
+    @@include("_services.html", {"title":"","subtitle":""})
+    <section class="design">
+        <div class="container">
+            <div class="design__inner">
+                <div class="design__row">
+                    <div class="design__box design__box_premier"><img class="design__img"
+                            src="images/staff/image-32.jpg" alt="image"></div>
+                    <div class="design__info">
+                        <h3 class="design__title title title_white">
+                            Design building / house
+                        </h3>
+                        <div class="design__text">
+                            is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                            of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                        </div>
+                    </div>
+                </div>
+                <div class="design__row design__row_last">
+                    <div class="design__info design__info_last">
+                        <div class="design__text design__text_last">
+                            is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                            of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                        </div>
+                    </div>
+                    <div class="design__box design__box_last"><img class="design__img design__img_last"
+                            src="images/staff/image-35.jpg" alt="image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+@@include("_bottom.html")
