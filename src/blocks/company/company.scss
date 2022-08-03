@@ -1,33 +1,39 @@
 .company {
 	$self: &;
 	margin-bottom: 100px;
+
 	@include media ('<=md') {
 		margin-bottom: 50px;
 	}
+
 	&__inner {
 		display: flex;
 		justify-content: space-around;
+
 		@include media ('<=md') {
 			flex-wrap: wrap-reverse;
 		}
 	}
+
 	&__images {
 		display: grid;
 		grid-template-columns: repeat(2, minmax(200px, auto));
 		grid-gap: 20px;
 		max-width: 640px;
-		width: 100%; 
-		padding-right: 20px;
+		width: 100%;
+		margin-right: 20px;
 		position: relative;
+
 		@include media ('<=md') {
 			max-width: none;
-			padding-right: 0;
+			margin-right: 0;
 		}
+
 		@include media ('<=xxs') {
-			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) ;
+			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 		}
 	}
-		
+
 	&__image {
 		display: block;
 		height: 100%;
@@ -35,9 +41,11 @@
 		max-height: 158px;
 		object-fit: cover;
 	}
+
 	&__image:nth-child(1) {
 		grid-row: 1/3;
 		max-height: 241px;
+
 		@include media ('<=xxs') {
 			grid-row: auto;
 		}
@@ -46,6 +54,7 @@
 	&__image:nth-child(4) {
 		grid-row: 2/4;
 		max-height: 241px;
+
 		@include media ('<=xxs') {
 			// grid-row: 3/4;
 			grid-row: auto;
@@ -64,33 +73,40 @@
 		box-shadow: 0px 8px 30px rgba(5, 96, 136, 0.15);
 		border-radius: 50%;
 		position: absolute;
-		margin: auto;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
 		z-index: 3;
+
 		&::before {
 			display: block;
 			content: '';
 			background: url(images/icons-sprite.svg#icon-check-view-blue) top/ 78px 59px no-repeat transparent;
-			
+
 			width: 78px;
 			height: 77px;
 		}
+
 		@include media ('<=lg') {
 			width: 138px;
 			height: 138px;
+
 			&::before {
 				background: url(images/icons-sprite.svg#icon-check-view-blue) top/ 68px 53px no-repeat transparent;
 				height: 60px;
 			}
 		}
+
 		@include media ('<=xs') {
 			width: 110px;
 			height: 110px;
+
 			&::before {
 				background: url(images/icons-sprite.svg#icon-check-view-blue) top/ 50px 38px no-repeat transparent;
 				width: 58px;
 				height: 40px;
 			}
-			
+
 		}
 	}
 
@@ -103,6 +119,7 @@
 	&__circly-text {
 		color: #056088;
 		font-weight: 500;
+
 		@include media ('<=xs') {
 			font-size: 13px;
 		}
@@ -113,16 +130,18 @@
 		max-width: 640px;
 		margin-bottom: 40px;
 		flex-shrink: 0;
+
 		@include media ('<=md') {
 			max-width: none;
 			flex-shrink: 1;
 
 		}
 	}
-	
+
 	&__text {
 		max-width: 425px;
 		margin-top: 16px;
+
 		@include media ('<=md') {
 			max-width: none;
 		}
